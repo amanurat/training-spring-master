@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:list id="languageList" list-class="java.util.LinkedList">
+        <value>Thai</value>
+        <value>English</value>
+        <value>Span</value>
+    </util:list>
+
+    <!-- creates a java.util.Set instance with the supplied values -->
+    <util:set id="languageSet">
+        <value>Thai</value>
+        <value>English</value>
+        <value>Span</value>
+    </util:set>
+
+    <!-- creates a java.util.Map instance with the supplied key-value pairs -->
+    <util:map id="languageMap">
+        <entry key="th" value="Thai"/>
+        <entry key="en" value="English"/>
+        <entry key="jp" value="Japan"/>
+    </util:map>
+
+
+    <bean id="greetingCollection" class="com.training.collection.GreetingCollection">
+
+        <property name="languageList" ref="languageList"/>
+        <property name="languageSet" ref="languageSet"/>
+        <property name="languageMap" ref="languageMap"/>
+    </bean>
+
+    <bean name="greetingCollection2" class="com.training.collection.GreetingCollection" p:message="Hello"/>
+
+
+</beans>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="greetingConstructor" class="com.training.di.constructor.GreetingConstructor">
+        <constructor-arg value="Hello World"/>
+    </bean>
+
+
+    <bean id="greetingSetter" class="com.training.di.setter.GreetingSetter" scope="prototype">
+        <property name="text" value="Hello World"/>
+        <!--<property name="anotherBean" ref="anotherBean"/>-->
+    </bean>
+
+    <bean id="anotherBean" class="com.training.di.setter.AnotherBean">
+
+    </bean>
+
+    <!--######### Resolving ambiguity  #########-->
+
+    <!--Before-->
+    <!--<bean id="employee" class="com.training.di.constructor.resolve.Employee">
+        <constructor-arg value="Assanai Manurat"/>
+        <constructor-arg value="false"/>
+        <constructor-arg value="28"/>
+    </bean>-->
+
+    <!--Resolving by index-->
+    <bean id="employee" class="com.training.di.constructor.resolve.Employee">
+        <constructor-arg value="Assanai Manurat" index="0"/>
+        <constructor-arg value="false" index="2"/>
+        <constructor-arg value="28" index="1"/>
+    </bean>
+    <!--Resolving by type-->
+    <!--<bean id="employee" class="com.training.di.constructor.resolve.Employee">
+        <constructor-arg value="Assani Manurat" type="java.lang.String" />
+        <constructor-arg value="false" type="java.lang.Boolean" />
+        <constructor-arg value="28" type="java.lang.Integer" />
+    </bean>-->
+
+
+</beans>
