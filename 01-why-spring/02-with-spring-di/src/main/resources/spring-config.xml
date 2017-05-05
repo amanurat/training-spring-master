@@ -3,26 +3,5 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="greetingController" class="com.training.controller.GreetingController">
-        <!-- Reference Bean-->
-        <!--<property name="greetingService" ref="greetingEnglishServiceImpl"/>-->
-
-        <!--Anonymous Bean -->
-        <property name="greetingService">
-            <bean class="com.training.service.GreetingThaiServiceIml"/>
-        </property>
-
-
-    </bean>
-
-    <bean id="greetingEnglishServiceImpl" class="com.training.service.GreetingEnglishServiceImpl">
-
-    </bean>
-
-
-    <bean id="greetingThaiServiceIml" class="com.training.service.GreetingThaiServiceIml">
-
-    </bean>
-
 
 </beans>
