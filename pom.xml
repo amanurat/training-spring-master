@@ -8,9 +8,7 @@
     <modules>
         <module>01-why-spring</module>
         <module>02-spring-core</module>
-        <module>03-spring-data-access</module>
-        <module>04-spring-web</module>
-        <module>05-spring-test</module>
+
     </modules>
     <name>training-spring-master Maven Mojo</name>
     <url>http://maven.apache.org</url>
