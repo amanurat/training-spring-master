@@ -1,5 +1,8 @@
 package com.training;
 
+import com.training.controller.GreetingController;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class GreetingApp {
 
     public static void main(String[] args) throws Exception {
@@ -14,10 +17,9 @@ public class GreetingApp {
         System.out.println(controller.say());
 */
 
-/*      ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
+      ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
         GreetingController controller = context.getBean(GreetingController.class);
         System.out.println(controller.say());
-*/
 
     }
 }
