@@ -7,12 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * Created by amanurat on 3/15/2016 AD.
- */
 public class GreetingCollection {
-
-
 
     private List<String> languageList;
 

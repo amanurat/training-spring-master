@@ -5,9 +5,6 @@ import com.training.service.GreetingService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * Created by amanurat on 3/9/2016 AD.
- */
 public class GreetingController {
 
     private static Logger LOGGER = LoggerFactory.getLogger(GreetingController.class);

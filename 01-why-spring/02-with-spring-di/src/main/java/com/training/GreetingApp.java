@@ -1,8 +1,5 @@
 package com.training;
 
-/**
- * Created by amanurat on 3/9/2016 AD.
- */
 public class GreetingApp {
 
     public static void main(String[] args) throws Exception {
